@@ -1,4 +1,4 @@
-{% macro main(default_rule, api_rule, cdn_rule, location_rule, apple_news_rule) %}
+{% macro main(default_rule, api_rule, cdn_rule, location_rule) %}
 # http://www.jjinc.com.au/announcements/apple170008services
 # https://gist.github.com/joseconstela/a6e06ef9737e097eddcaf940ea313e38
 #
@@ -94,15 +94,6 @@ DOMAIN-SUFFIX,apple-dns.net,{{ default_rule }}
 # OCSP
 DOMAIN-SUFFIX,ocsp.apple.com,{{ default_rule }}
 USER-AGENT,com.apple.trustd*,{{ default_rule }}
-
-#
-# Apple News
-#
-USER-AGENT,AppleNews*,{{apple_news_rule}}
-DOMAIN-SUFFIX,apple.news,{{apple_news_rule}}
-DOMAIN,news-events.apple.com,{{apple_news_rule}}
-DOMAIN,news-edge.apple.com,{{apple_news_rule}}
-DOMAIN,apple.comscoreresearch.com,{{apple_news_rule}}
 
 #
 # Apple 其他直连
